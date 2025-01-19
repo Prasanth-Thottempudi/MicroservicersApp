@@ -2,4 +2,4 @@ docker build -t prasanth120100/user:v1 .
 
 docker run -p 8080:8081 prasanth120100/user:v1
 
-docker image push docker.io/eazybytes/user:v1
+docker image push docker.io/prasanth120100/user:v1
