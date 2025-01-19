@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  accounts:
+    image: "prasanth120100/user:v1"
+    container_name: user1_ms
+    ports:
+      - "8081:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - prasanth
+  
+networks:
+  prasanth:
+    driver: bridge
