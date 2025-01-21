@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  accounts:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Adjust this if your Dockerfile has a different name
+    image: prasanth120100/user:v1
+    container_name: user_ms
+    ports:
+      - "8081:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - prasanth
+
+networks:
+  prasanth:
+    driver: bridge
