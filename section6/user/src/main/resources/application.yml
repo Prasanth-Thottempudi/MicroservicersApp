@@ -15,6 +15,16 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: true
+  config:
+    import:
+      - "application_prod.yml"
+      - "application_qa.yml"
+  profiles:
+    active:
+      - "qa"
+
+build:
+  version: "3.0"
 
 accounts:
   message: "Welcome to user APIs"
