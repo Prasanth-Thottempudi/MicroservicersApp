@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.user.configuration.ContactInfo;
-import com.user.configuration.ContactInfo;
 import com.user.entity.Customer;
 import com.user.service.UserService;
 
@@ -25,8 +24,7 @@ import com.user.service.UserService;
 @RequestMapping("/api")
 public class UserController {
 	
-	 @Value("${build.version}")
-	    private String buildVersion;
+	
 
     @Autowired
     private UserService userService;
@@ -42,7 +40,7 @@ public class UserController {
     
     @GetMapping("/version")
     public String demo() {
-    	return "version is"+buildVersion;
+    	return "version is";
     }
 
     @GetMapping("/{id}")
