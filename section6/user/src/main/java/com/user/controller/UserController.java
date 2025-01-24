@@ -24,6 +24,8 @@ import com.user.service.UserService;
 @RequestMapping("/api")
 public class UserController {
 	
+	@Value("${welcome-message}")
+    private String buildVersion;
 	
 
     @Autowired
@@ -40,7 +42,7 @@ public class UserController {
     
     @GetMapping("/version")
     public String demo() {
-    	return "version is";
+    	return "version is"+buildVersion;
     }
 
     @GetMapping("/{id}")

@@ -1,24 +1,13 @@
+server:
+  port: 8888
+
 spring:
-  application:
-    name: "configserver"
-  profiles:
-    active: native
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config"
-
-server:
- port: 8071
-
+        git:
+          uri:  https://github.com/Prasanth-Thottempudi/config-repo
+          clone-on-start: true
+      label: main  # (branch name)
 
 
-
-#  cloud:
-#    config:
-#      server:
-#        git:
-#          uri: https://github.com/Prasanth-Thottempudi/config-repo
-#          username: Prasanth-Thottempudi
-#          password: Adolf@git123
